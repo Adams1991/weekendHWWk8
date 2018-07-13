@@ -21,7 +21,7 @@ public class CompetitionTest {
     @Before
     public void setUp() {
         competition = new Competition("Champs Cup", "No Winner", false);
-        team1= new Team();
+        team1= new Team("Barca", 30, competition);
         team2 = new Team("Cowden FC", 30, competition);
         manager1 = new Manager("John", 8, team1);
         manager2 = new Manager("Bob", 10, team2);
@@ -65,7 +65,13 @@ public class CompetitionTest {
     }
 
 
-
+//    @Test
+//    public void canPlayGame__win(){
+//        competition.getTeamsInCompetition().add(team2);
+//        competition.getTeamsInCompetition().add(team1);
+//        competition.gamePlayed(team1, team2);
+//        assertEquals( 33, team1.getPoints());
+//    }
 
 
 
