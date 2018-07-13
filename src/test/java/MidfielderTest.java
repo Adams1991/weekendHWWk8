@@ -10,10 +10,12 @@ public class MidfielderTest {
 
     Midfielder midfielder;
     Team team;
+    Team team2;
 
     @Before
     public void setUp() {
         team = new Team();
+        team2 = new Team();
         midfielder = new Midfielder("John", 30, 10, team, 30 );
     }
 
@@ -31,35 +33,45 @@ public class MidfielderTest {
 
     @Test
     public void getAge() {
+        assertEquals(30, midfielder.getAge());
     }
 
     @Test
     public void setAge() {
+        midfielder.setAge(10);
+        assertEquals(10, midfielder.getAge());
     }
 
     @Test
     public void getRating() {
+        assertEquals(10, midfielder.getRating());
     }
 
     @Test
     public void setRating() {
+        midfielder.setRating(9);
+        assertEquals(9, midfielder.getRating());
     }
 
     @Test
     public void getTeam() {
+        assertEquals(team, midfielder.getTeam());
     }
 
     @Test
     public void setTeam() {
+        midfielder.setTeam(team2);
+        assertEquals(team2, midfielder.getTeam());
     }
 
     @Test
-    public void getPassAccurracy(){
-
+    public void getPassAccuracy(){
+        assertEquals(30, midfielder.getPassAccuracy(), 0.01);
     }
 
     @Test
-    public void setPassAccurracy(){
-
+    public void setPassAccuracy(){
+        midfielder.setPassAccuracy(40);
+        assertEquals(40, midfielder.getPassAccuracy(), 0.01);
     }
 }
