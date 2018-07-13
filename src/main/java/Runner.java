@@ -1,6 +1,8 @@
 import db.DBHelper;
 import models.*;
 
+import java.util.List;
+
 public class Runner {
 
     public static void main(String[] args) {
@@ -10,11 +12,17 @@ public class Runner {
 
         Competition competition = competition = new Competition("Champs Cup", "No Winner", false);
         DBHelper.save(competition);
+        competition.setName("FA Cup");
+        DBHelper.update(competition);
 
-        Competition competition2 = competition = new Competition("Bla Cup", "No Winner", false);
-        DBHelper.save(competition);
-        competition2.setName("FA Cup");
-        DBHelper.update(competition2);
+        Competition competition2 = new Competition("Bla Cup", "No Winner", false);
+        DBHelper.save(competition2);
+        DBHelper.delete(competition2);
+
+        Competition foundCompetition = DBHelper.findById(Competition.class, 1);
+
+        List<Competition> allCompetitions = DBHelper.getAll(Competition.class);
+
 
         Team team = new Team("Cowden FC", 30, competition);
         DBHelper.save(team);
