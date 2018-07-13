@@ -1,5 +1,11 @@
 package models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "strikers")
 public class Striker extends Player {
 
     private boolean provenGoalscorer;
@@ -12,6 +18,7 @@ public class Striker extends Player {
         this.provenGoalscorer = provenGoalscorer;
     }
 
+    @Column(name = "proven_goalscorer")
     public boolean isProvenGoalscorer() {
         return provenGoalscorer;
     }

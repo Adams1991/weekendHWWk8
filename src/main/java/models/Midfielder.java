@@ -1,5 +1,11 @@
 package models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "midfielders")
 public class Midfielder extends Player{
 
     private double passAccuracy;
@@ -12,6 +18,8 @@ public class Midfielder extends Player{
         this.passAccuracy = passAccuracy;
     }
 
+
+    @Column(name = "pass_accuracy")
     public double getPassAccuracy() {
         return passAccuracy;
     }
