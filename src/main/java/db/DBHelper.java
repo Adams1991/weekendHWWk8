@@ -69,7 +69,7 @@ public class DBHelper {
         return results;
     }
 
-    public static <T> T find(Class classType, int id) {
+    public static <T> T findById(Class classType, int id) {
         session = HibernateUtil.getSessionFactory().openSession();
         T result = null;
         try {
