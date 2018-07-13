@@ -4,27 +4,26 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertNotNull;
 
 public class TeamTest {
 
-    Midfielder midfielder;
-    Striker striker;
-    Defender defender;
+
     Manager manager;
+    Manager manager2;
     Team team;
     Team team2;
     Competition competition;
+    Competition competition2;
 
     @Before
     public void setUp() {
         competition = new Competition();
+        competition2 = new Competition();
+        manager = new Manager("John", 10, team);
+        manager2 = new Manager();
         team2= new Team();
         team = new Team("Cowden FC", 30, manager, competition);
-        manager = new Manager("John", 10, team);
-        midfielder = new Midfielder("John", 30, 10,team, 30 );
-        striker = new Striker("John", 30, 10, team, true);
-        defender = new Defender("John", 30, 10, team);
-
     }
 
 
@@ -45,8 +44,33 @@ public class TeamTest {
     }
 
     @Test
-    public void setAptitude() {
+    public void setPoints() {
         team.setPoints(9);
         assertEquals(9, team.getPoints());
     }
+
+    @Test
+    public void getManager(){
+        assertEquals(manager, team.getManager());
+    }
+
+    @Test
+    public void setManager(){
+        team.setManager(manager2);
+        assertEquals(manager2, team.getManager());
+    }
+
+    @Test
+    public void getCompetition(){
+        assertEquals(competition, team.getCompetition());
+    }
+
+    @Test
+    public void setCompetition(){
+        team.setCompetition(competition2);
+        assertEquals(competition2, team.getCompetition());
+    }
+
+
+
 }

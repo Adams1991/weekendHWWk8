@@ -56,10 +56,6 @@ public class Team {
         this.players = players;
     }
 
-    public void addPlayer(Player player){
-        this.players.add(player);
-    }
-
     public Manager getManager() {
         return manager;
     }
