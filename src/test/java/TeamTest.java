@@ -24,9 +24,9 @@ public class TeamTest {
         competition2 = new Competition();
         team1= new Team("Barca", 30, competition);
         team2 = new Team("Cowden FC", 30, competition);
-        manager1 = new Manager("John", 8, team1);
-        manager2 = new Manager("Bob", 10, team2);
-        strikerForTeam2 = new Striker("Rachel", 23, 10, team2, true);
+        manager1 = new Manager("John", 10, team1);
+        manager2 = new Manager("Bob", 8, team2);
+        strikerForTeam2 = new Striker("Rachel", 23, 6, team2, true);
         midfielderForTeam1 = new Midfielder("John", 30, 9, team2, 20);
     }
 
@@ -72,6 +72,19 @@ public class TeamTest {
         assertEquals(competition2, team1.getCompetition());
     }
 
+    @Test
+    public void getOverallPlayersRatings() {
+        team2.getPlayers().add(strikerForTeam2);
+        assertEquals(6, team2.OverallPlayersRatings());
+    }
+
+//    @Test
+//    public void canPlayGame__win(){
+//        team2.getPlayers().add(strikerForTeam2);
+//        team1.getPlayers().add(midfielderForTeam1);
+//        team1.playGame(team2);
+//        assertEquals( 33, team1.getPoints());
+//    }
 
 
 }

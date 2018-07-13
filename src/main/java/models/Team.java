@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -21,6 +22,7 @@ public class Team {
         this.name = name;
         this.points = points;
         this.competition = competition;
+        this.players = new ArrayList<Player>();
     }
 
     public Team() {
@@ -81,5 +83,25 @@ public class Team {
 
     public void setCompetition(Competition competition) {
         this.competition = competition;
+    }
+
+//    public void playGame(Team team2) {
+//        int comparisonScore = 0;
+//        int overallRating = 0;
+//        for (Player player : players) {
+//            for (Player playerOtherTeam : team2.getPlayers()) {
+//                if (player.getRating() > playerOtherTeam.getRating())
+//                    comparisonScore += 1;
+//            }
+//
+//        }
+//    }
+
+    public int OverallPlayersRatings() {
+        int overallRating = 0;
+        for (Player player : getPlayers()) {
+            overallRating += player.getRating();
+        }
+        return overallRating;
     }
 }
