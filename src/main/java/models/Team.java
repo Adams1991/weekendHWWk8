@@ -102,15 +102,12 @@ public class Team {
         else
             opponentGameScore += 3;
 
-
         if (teamGameScore > opponentGameScore)
             setPoints(teamPoints += 3);
         else
             team2.setPoints(opponentPoints += 3);
 
-        if (teamGameScore == opponentGameScore)
-            setPoints(teamPoints += 1);
-            team2.setPoints(opponentPoints += 1);
+
 
 
 

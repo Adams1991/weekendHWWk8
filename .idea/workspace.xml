@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3606dab9-ffa5-404c-9f52-516600a9ecec" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Team.java" afterPath="$PROJECT_DIR$/src/main/java/models/Team.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TeamTest.java" afterPath="$PROJECT_DIR$/src/test/java/TeamTest.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Team.class" afterPath="$PROJECT_DIR$/target/classes/models/Team.class" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TeamTest.class" afterPath="$PROJECT_DIR$/target/test-classes/TeamTest.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,26 +19,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TeamTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TeamTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TeamTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state relative-caret-position="294">
+              <caret line="101" column="23" lean-forward="false" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
               <folding>
-                <element signature="e#1157#1158#0" expanded="true" />
-                <element signature="e#1208#1209#0" expanded="true" />
-                <element signature="e#1509#1510#0" expanded="true" />
-                <element signature="e#1574#1575#0" expanded="true" />
+                <element signature="e#1226#1227#0" expanded="true" />
+                <element signature="e#1277#1278#0" expanded="true" />
+                <element signature="e#1578#1579#0" expanded="true" />
+                <element signature="e#1643#1644#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1245">
-              <caret line="83" column="1" lean-forward="false" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+            <state relative-caret-position="527">
+              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,8 +49,8 @@
       <file leaf-file-name="Team.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/models/Team.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+            <state relative-caret-position="315">
+              <caret line="102" column="32" lean-forward="false" selection-start-line="102" selection-start-column="32" selection-end-line="102" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#717#718#0" expanded="true" />
@@ -280,7 +283,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Runner">
+  <component name="RunManager" selected="JUnit.All in weekendHWWk8">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -443,9 +446,9 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Runner" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TeamTest.canPlayGame__win" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.All in weekendHWWk8" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in weekendHWWk8" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Runner" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TeamTest.canPlayGame__win" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.TeamTest.getOverallPlayersRatings" />
       </list>
     </recent_temporary>
@@ -467,35 +470,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_weekendHWWk8 - 2018.07.13 at 18h 24m 44s.xml">
+    <history-entry file="All_in_weekendHWWk8 - 2018.07.13 at 18h 48m 49s.xml">
       <configuration name="All in weekendHWWk8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_weekendHWWk8 - 2018.07.13 at 18h 40m 11s.xml">
+    <history-entry file="All_in_weekendHWWk8 - 2018.07.13 at 18h 51m 03s.xml">
       <configuration name="All in weekendHWWk8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_weekendHWWk8 - 2018.07.13 at 18h 41m 01s.xml">
+    <history-entry file="All_in_weekendHWWk8 - 2018.07.13 at 18h 52m 26s.xml">
       <configuration name="All in weekendHWWk8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TeamTest_canPlayGame__win - 2018.07.13 at 18h 43m 16s.xml">
-      <configuration name="TeamTest.canPlayGame__win" configurationId="JUnit" />
+    <history-entry file="All_in_weekendHWWk8 - 2018.07.13 at 18h 54m 56s.xml">
+      <configuration name="All in weekendHWWk8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TeamTest_canPlayGame__win - 2018.07.13 at 18h 43m 31s.xml">
-      <configuration name="TeamTest.canPlayGame__win" configurationId="JUnit" />
+    <history-entry file="All_in_weekendHWWk8 - 2018.07.13 at 18h 55m 13s.xml">
+      <configuration name="All in weekendHWWk8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TeamTest_canPlayGame__win - 2018.07.13 at 18h 43m 35s.xml">
-      <configuration name="TeamTest.canPlayGame__win" configurationId="JUnit" />
+    <history-entry file="All_in_weekendHWWk8 - 2018.07.13 at 18h 55m 43s.xml">
+      <configuration name="All in weekendHWWk8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TeamTest_canPlayGame__win - 2018.07.13 at 18h 44m 28s.xml">
-      <configuration name="TeamTest.canPlayGame__win" configurationId="JUnit" />
+    <history-entry file="All_in_weekendHWWk8 - 2018.07.13 at 18h 56m 06s.xml">
+      <configuration name="All in weekendHWWk8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TeamTest_canPlayGame__win - 2018.07.13 at 18h 44m 35s.xml">
-      <configuration name="TeamTest.canPlayGame__win" configurationId="JUnit" />
+    <history-entry file="All_in_weekendHWWk8 - 2018.07.13 at 18h 56m 49s.xml">
+      <configuration name="All in weekendHWWk8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TeamTest_getOverallPlayersRatings - 2018.07.13 at 18h 20m 15s.xml">
-      <configuration name="TeamTest.getOverallPlayersRatings" configurationId="JUnit" />
+    <history-entry file="All_in_weekendHWWk8 - 2018.07.13 at 18h 59m 12s.xml">
+      <configuration name="All in weekendHWWk8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TeamTest_getOverallPlayersRatings - 2018.07.13 at 18h 20m 19s.xml">
-      <configuration name="TeamTest.getOverallPlayersRatings" configurationId="JUnit" />
+    <history-entry file="All_in_weekendHWWk8 - 2018.07.13 at 19h 01m 16s.xml">
+      <configuration name="All in weekendHWWk8" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -511,7 +514,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28198075" sideWeight="0.503231" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287483" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28198075" sideWeight="0.49676898" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -792,8 +795,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Team.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        <state relative-caret-position="315">
+          <caret line="102" column="32" lean-forward="false" selection-start-line="102" selection-start-column="32" selection-end-line="102" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#717#718#0" expanded="true" />
@@ -824,25 +827,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TeamTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        <state relative-caret-position="527">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
-            <element signature="e#1157#1158#0" expanded="true" />
-            <element signature="e#1208#1209#0" expanded="true" />
-            <element signature="e#1509#1510#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/TeamTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="83" column="1" lean-forward="false" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+        <state relative-caret-position="294">
+          <caret line="101" column="23" lean-forward="false" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
+            <element signature="e#1578#1579#0" expanded="true" />
+            <element signature="e#1643#1644#0" expanded="true" />
           </folding>
         </state>
       </provider>
