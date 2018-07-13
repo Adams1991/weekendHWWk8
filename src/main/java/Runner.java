@@ -40,9 +40,21 @@ public class Runner {
         List<Team> allTeams = DBHelper.getAll(Team.class);
 
 
+        // Player Crud tests(only testing on subclass)
 
-        Midfielder midfielder = new Midfielder("Bob", 18, 20, team, 100 );
-        DBHelper.save(midfielder); 
+        Midfielder midfielder = new Midfielder("Grant", 10, 20, team, 100);
+        DBHelper.save(midfielder);
+        midfielder.setName("Bill");
+        DBHelper.update(midfielder);
+
+        Midfielder midfielder2 = new Midfielder("Stacey" , 20, 30, team, 100);
+        DBHelper.save(midfielder2);
+        DBHelper.delete(midfielder2);
+
+        Midfielder foundMidfielder = DBHelper.findById(Midfielder.class, 1);
+
+        List<Midfielder> allMidfielders = DBHelper.getAll(Midfielder.class);
+        
         
         Striker striker = new Striker("Bob", 18, 20, team, true);
         DBHelper.save(striker); 
@@ -51,7 +63,7 @@ public class Runner {
         DBHelper.save(defender);
 
         
-        // Manager Crud test
+        // Manager Crud tests
         Manager manager = new Manager("Bob", 10, team);
         DBHelper.save(manager);
         manager.setName("Bill");
