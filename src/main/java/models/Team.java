@@ -1,10 +1,12 @@
 package models;
 
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAnyAttribute;
 import java.util.List;
 
+
+@Entity
+@Table(name= "teams")
 public class Team {
 
     private int id;
@@ -25,7 +27,9 @@ public class Team {
     public Team() {
     }
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -34,6 +38,7 @@ public class Team {
         this.id = id;
     }
 
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -42,6 +47,7 @@ public class Team {
         this.name = name;
     }
 
+    @Column(name = "points")
     public int getPoints() {
         return points;
     }
@@ -68,6 +74,8 @@ public class Team {
         this.manager = manager;
     }
 
+    @ManyToOne
+    @JoinColumn(name="competition_id", nullable=false)
     public Competition getCompetition() {
         return competition;
     }

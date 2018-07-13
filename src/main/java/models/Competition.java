@@ -1,7 +1,11 @@
 package models;
 
+import javax.persistence.*;
 import java.util.List;
 
+
+@Entity
+@Table(name= "competitions")
 public class Competition {
     private int id;
     private String name;
@@ -18,6 +22,9 @@ public class Competition {
     public Competition() {
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -26,6 +33,7 @@ public class Competition {
         this.id = id;
     }
 
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -34,6 +42,7 @@ public class Competition {
         this.name = name;
     }
 
+    @Column(name = "winner")
     public String getWinner() {
         return winner;
     }
@@ -42,6 +51,7 @@ public class Competition {
         this.winner = winner;
     }
 
+    @Column(name = "is_complete")
     public boolean isCompetitionComplete() {
         return competitionComplete;
     }
@@ -50,6 +60,7 @@ public class Competition {
         this.competitionComplete = competitionComplete;
     }
 
+    @OneToMany(mappedBy="competition", fetch = FetchType.LAZY)
     public List<Team> getTeamsInCompetition() {
         return teamsInCompetition;
     }
