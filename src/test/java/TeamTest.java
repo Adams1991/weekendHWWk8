@@ -78,13 +78,15 @@ public class TeamTest {
         assertEquals(6, team2.OverallPlayersRatings());
     }
 
-//    @Test
-//    public void canPlayGame__win(){
-//        team2.getPlayers().add(strikerForTeam2);
-//        team1.getPlayers().add(midfielderForTeam1);
-//        team1.playGame(team2);
-//        assertEquals( 33, team1.getPoints());
-//    }
+    @Test
+    public void canPlayGame__win(){
+        team2.getPlayers().add(strikerForTeam2);
+        team1.getPlayers().add(midfielderForTeam1);
+        team1.setManager(manager1);
+        team1.setManager(manager2);
+        team1.playGame(team2);
+        assertEquals( 33, team1.getPoints());
+    }
 
 
 }

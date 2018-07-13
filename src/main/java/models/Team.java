@@ -23,6 +23,7 @@ public class Team {
         this.points = points;
         this.competition = competition;
         this.players = new ArrayList<Player>();
+        this.manager = new Manager();
     }
 
     public Team() {
@@ -85,17 +86,37 @@ public class Team {
         this.competition = competition;
     }
 
-//    public void playGame(Team team2) {
-//        int comparisonScore = 0;
-//        int overallRating = 0;
-//        for (Player player : players) {
-//            for (Player playerOtherTeam : team2.getPlayers()) {
-//                if (player.getRating() > playerOtherTeam.getRating())
-//                    comparisonScore += 1;
-//            }
-//
-//        }
-//    }
+    public void playGame(Team team2) {
+        int teamGameScore = 0;
+        int opponentGameScore = 0;
+        int teamPoints = getPoints();
+        int opponentPoints = team2.getPoints();
+
+        if (OverallPlayersRatings() > team2.OverallPlayersRatings())
+            teamGameScore += 3;
+        else
+            opponentGameScore += 3;
+
+        if (getManager().getAptitude() > team2.getManager().getAptitude())
+            teamGameScore +=3;
+        else
+            opponentGameScore += 3;
+
+
+        if (teamGameScore > opponentGameScore)
+            setPoints(teamPoints += 3);
+        else
+            team2.setPoints(opponentPoints += 3);
+
+        if (teamGameScore == opponentGameScore)
+            setPoints(teamPoints += 1);
+            team2.setPoints(opponentPoints += 1);
+
+
+
+        }
+
+
 
     public int OverallPlayersRatings() {
         int overallRating = 0;
