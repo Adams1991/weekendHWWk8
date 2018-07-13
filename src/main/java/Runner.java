@@ -50,8 +50,20 @@ public class Runner {
         Defender defender = new Defender("Bob", 18, 20, team );
         DBHelper.save(defender);
 
-        Manager manager = new Manager("John", 10, team);
+        
+        // Manager Crud test
+        Manager manager = new Manager("Bob", 10, team);
         DBHelper.save(manager);
+        manager.setName("Bill");
+        DBHelper.update(manager);
+
+        Manager manager2 = new Manager("Lauren" , 10, team);
+        DBHelper.save(manager2);
+        DBHelper.delete(manager2);
+
+        Manager foundManager = DBHelper.findById(Manager.class, 1);
+
+        List<Manager> allManagers = DBHelper.getAll(Manager.class);
 
 
 
