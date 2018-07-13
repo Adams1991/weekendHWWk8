@@ -8,7 +8,7 @@ public class Runner {
     public static void main(String[] args) {
 
 
-        // Competition CRUD test
+        // Competition CRUD tests
 
         Competition competition = competition = new Competition("Champs Cup", "No Winner", false);
         DBHelper.save(competition);
@@ -24,8 +24,22 @@ public class Runner {
         List<Competition> allCompetitions = DBHelper.getAll(Competition.class);
 
 
+        // Team CRUD tests
+
         Team team = new Team("Cowden FC", 30, competition);
         DBHelper.save(team);
+        team.setName("Loch FC");
+        DBHelper.update(team);
+
+        Team team2 = new Team("Bla United" , 10, competition);
+        DBHelper.save(team2);
+        DBHelper.delete(team2);
+
+        Team foundTeam = DBHelper.findById(Team.class, 1);
+
+        List<Team> allTeams = DBHelper.getAll(Team.class);
+
+
 
         Midfielder midfielder = new Midfielder("Bob", 18, 20, team, 100 );
         DBHelper.save(midfielder); 
