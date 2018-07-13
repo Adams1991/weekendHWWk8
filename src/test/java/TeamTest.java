@@ -1,6 +1,9 @@
 
 import models.*;
 import org.junit.Before;
+import org.junit.Test;
+
+import static junit.framework.Assert.assertEquals;
 
 public class TeamTest {
 
@@ -25,7 +28,25 @@ public class TeamTest {
     }
 
 
+    @Test
+    public void getName() {
+        assertEquals("Cowden FC", team.getName());
+    }
 
+    @Test
+    public void setName() {
+        team.setName("Bla");
+        assertEquals("Bla", team.getName());
+    }
 
+    @Test
+    public void getPoints() {
+        assertEquals(30, team.getPoints());
+    }
 
+    @Test
+    public void setAptitude() {
+        team.setPoints(9);
+        assertEquals(9, team.getPoints());
+    }
 }
