@@ -12,16 +12,17 @@ public class Team {
     private Competition competition;
 
 
-    public Team() {
-    }
 
-    public Team(int id, String name, int points, Manager manager, Competition competition) {
-        this.id = id;
+    public Team(String name, int points, Manager manager, Competition competition) {
         this.name = name;
         this.points = points;
         this.manager = manager;
         this.competition = competition;
     }
+
+    public Team() {
+    }
+
 
     public int getId() {
         return id;
@@ -53,6 +54,10 @@ public class Team {
 
     public void setPlayers(List<Player> players) {
         this.players = players;
+    }
+
+    public void addPlayer(Player player){
+        this.players.add(player);
     }
 
     public Manager getManager() {
