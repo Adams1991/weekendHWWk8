@@ -1,11 +1,18 @@
 package models;
 
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="players")
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Player {
     private int id;
     private String name;
     private int age;
     private int rating;
     private Team team;
+
 
     public Player() {
     }
@@ -17,6 +24,9 @@ public abstract class Player {
         this.team = team;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -25,6 +35,7 @@ public abstract class Player {
         this.id = id;
     }
 
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -33,6 +44,7 @@ public abstract class Player {
         this.name = name;
     }
 
+    @Column(name = "age")
     public int getAge() {
         return age;
     }
@@ -41,6 +53,7 @@ public abstract class Player {
         this.age = age;
     }
 
+    @Column(name = "rating")
     public int getRating() {
         return rating;
     }
@@ -49,6 +62,8 @@ public abstract class Player {
         this.rating = rating;
     }
 
+    @ManyToOne
+    @JoinColumn(name="team_id", nullable=false)
     public Team getTeam() {
         return team;
     }
