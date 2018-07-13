@@ -23,7 +23,7 @@ public class TeamTest {
         manager = new Manager("John", 10, team);
         manager2 = new Manager();
         team2= new Team();
-        team = new Team("Cowden FC", 30, manager, competition);
+        team = new Team("Cowden FC", 30, competition);
     }
 
 
@@ -49,10 +49,7 @@ public class TeamTest {
         assertEquals(9, team.getPoints());
     }
 
-    @Test
-    public void getManager(){
-        assertEquals(manager, team.getManager());
-    }
+
 
     @Test
     public void setManager(){

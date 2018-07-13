@@ -15,7 +15,6 @@
         <mapping class = "models.Manager"/>
         <mapping class = "models.Competition"/>
         <mapping class = "models.Player"/>
-        <mapping class = "models.Game"/>
         <mapping class = "models.Midfielder"/>
         <mapping class = "models.Striker"/>
         <mapping class = "models.Defender"/>

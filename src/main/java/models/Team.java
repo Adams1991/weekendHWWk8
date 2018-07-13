@@ -1,5 +1,8 @@
 package models;
 
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import java.util.List;
 
 public class Team {
@@ -13,10 +16,9 @@ public class Team {
 
 
 
-    public Team(String name, int points, Manager manager, Competition competition) {
+    public Team(String name, int points, Competition competition) {
         this.name = name;
         this.points = points;
-        this.manager = manager;
         this.competition = competition;
     }
 
@@ -48,6 +50,7 @@ public class Team {
         this.points = points;
     }
 
+    @OneToMany(mappedBy="team", fetch = FetchType.LAZY)
     public List<Player> getPlayers() {
         return players;
     }
@@ -56,6 +59,7 @@ public class Team {
         this.players = players;
     }
 
+    @OneToOne(mappedBy = "team", fetch = FetchType.LAZY)
     public Manager getManager() {
         return manager;
     }
