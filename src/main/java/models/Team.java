@@ -1,7 +1,6 @@
 package models;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlAnyAttribute;
 import java.util.List;
 
 
