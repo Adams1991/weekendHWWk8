@@ -68,4 +68,6 @@ public class Competition {
     public void setTeamsInCompetition(List<Team> teamsInCompetition) {
         this.teamsInCompetition = teamsInCompetition;
     }
+
+
 }
