@@ -28,4 +28,29 @@ public class CompetitionTest {
     }
 
 
+    @Test
+    public void getWinner() {
+        assertEquals("No Winner", competition.getWinner());
+    }
+
+    @Test
+    public void setWinner() {
+        competition.setWinner("Bla");
+        assertEquals("Bla", competition.getWinner());
+    }
+
+    @Test
+    public void isComplete(){
+        assertEquals(false, competition.isCompetitionComplete());
+    }
+
+    @Test
+    public void setComplete(){
+        competition.setCompetitionComplete(true);
+        assertEquals(true, competition.isCompetitionComplete());
+    }
+
+
+
+
 }
