@@ -62,7 +62,7 @@ public class Competition {
         this.competitionComplete = competitionComplete;
     }
 
-    @OneToMany(mappedBy="competition", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy="competition", fetch = FetchType.EAGER)
     public List<Team> getTeamsInCompetition() {
         return teamsInCompetition;
     }
