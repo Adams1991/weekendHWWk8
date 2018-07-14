@@ -65,13 +65,20 @@ public class CompetitionTest {
     }
 
 
-//    @Test
-//    public void canPlayGame__win(){
-//        competition.getTeamsInCompetition().add(team2);
-//        competition.getTeamsInCompetition().add(team1);
-//        competition.gamePlayed(team1, team2);
-//        assertEquals( 33, team1.getPoints());
-//    }
+    @Test
+    public void canRunCompetition(){
+        competition.getTeamsInCompetition().add(team2);
+        competition.getTeamsInCompetition().add(team1);
+        team2.getPlayers().add(strikerForTeam2);
+        team1.getPlayers().add(midfielderForTeam1);
+        team1.setManager(manager1);
+        team2.setManager(manager2);
+        competition.runCompetition();
+        assertEquals( 30, team1.getPoints());
+        assertEquals( 36, team2.getPoints());
+        assertEquals( "Cowden FC", competition.getWinner());
+        assertEquals( true, competition.isCompetitionComplete());
+    }
 
 
 

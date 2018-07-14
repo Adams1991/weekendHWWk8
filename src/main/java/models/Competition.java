@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -17,6 +18,7 @@ public class Competition {
         this.name = name;
         this.winner = winner;
         this.competitionComplete = competitionComplete;
+        this.teamsInCompetition = new ArrayList<Team>();
     }
 
     public Competition() {
@@ -67,6 +69,26 @@ public class Competition {
 
     public void setTeamsInCompetition(List<Team> teamsInCompetition) {
         this.teamsInCompetition = teamsInCompetition;
+    }
+
+
+    public void runCompetition() {
+        Team winner = null;
+
+        for (Team team : getTeamsInCompetition())
+            for (Team team2 : getTeamsInCompetition())
+                if (team.getName() != team2.getName())
+                    team.playGame(team2);
+
+        for (Team potentialWinner : getTeamsInCompetition())
+            for (Team potentialWinner2 : getTeamsInCompetition())
+                if (potentialWinner.getPoints() > potentialWinner2.getPoints())
+                    winner = potentialWinner;
+
+        setWinner(winner.getName());
+        setCompetitionComplete(true);
+
+
     }
 
 
