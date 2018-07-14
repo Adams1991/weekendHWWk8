@@ -13,7 +13,6 @@ public class TeamTest {
     Manager manager2;
     Team team1;
     Team team2;
-    Team team3;
     Competition competition;
     Competition competition2;
     Midfielder midfielderForTeam1;
@@ -25,7 +24,6 @@ public class TeamTest {
         competition2 = new Competition();
         team1= new Team("Barca", 30, competition);
         team2 = new Team("Cowden FC", 30, competition);
-        team3 = new Team("Non FC", 30, competition);
         manager1 = new Manager("John", 10, team1);
         manager2 = new Manager("Bob", 8, team2);
         strikerForTeam2 = new Striker("Rachel", 23, 6, team2, true);
@@ -102,6 +100,16 @@ public class TeamTest {
         assertEquals(33, team2.getPoints());
     }
 
+    @Test
+    public void canPlayGame__draw(){
+        team1.getPlayers().add(midfielderForTeam1);
+        team2.getPlayers().add(midfielderForTeam1);
+        team2.setManager(manager1);
+        team1.setManager(manager1);
+        team2.playGame(team1);
+        assertEquals( 31, team1.getPoints());
+        assertEquals(31, team2.getPoints());
+    }
 
 
 

@@ -94,20 +94,21 @@ public class Team {
 
         if (OverallPlayersRatings() > team2.OverallPlayersRatings())
             teamGameScore += 3;
-        else
-            opponentGameScore += 3;
-
         if (getManager().getAptitude() > team2.getManager().getAptitude())
             teamGameScore +=3;
-        else
-            opponentGameScore += 3;
+        if (OverallPlayersRatings() < team2.OverallPlayersRatings())
+           opponentGameScore += 3;
+        if (getManager().getAptitude() < team2.getManager().getAptitude())
+            opponentGameScore +=3;
 
-        if (teamGameScore > opponentGameScore)
+
+        if (teamGameScore > opponentGameScore ) {
             setPoints(teamPoints += 3);
-        else
+        } else if (teamGameScore == opponentGameScore) {
+            setPoints(teamPoints += 1);
+            team2.setPoints(opponentPoints +=1);
+        } else if (teamGameScore < opponentGameScore)
             team2.setPoints(opponentPoints += 3);
-
-
 
 
 
