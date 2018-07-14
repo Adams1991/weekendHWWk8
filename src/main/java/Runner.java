@@ -32,7 +32,7 @@ public class Runner {
         team.setName("Loch FC");
         DBHelper.update(team);
 
-        Team team3 = new Team("Cowden FC", 30, competition);
+        Team team3 = new Team("Barca", 30, competition);
         DBHelper.save(team3);
 
         Team team2 = new Team("Bla United" , 10, competition);
@@ -60,10 +60,10 @@ public class Runner {
         List<Midfielder> allMidfielders = DBHelper.getAll(Midfielder.class);
         
         
-        Striker striker = new Striker("Bob", 18, 8, team, true);
+        Striker striker = new Striker("Bob", 18, 8, team3, true);
         DBHelper.save(striker); 
         
-        Defender defender = new Defender("Bobi", 18, 20, team );
+        Defender defender = new Defender("Bobi", 18, 20, team);
         DBHelper.save(defender);
 
         

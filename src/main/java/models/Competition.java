@@ -2,7 +2,9 @@ package models;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -62,7 +64,7 @@ public class Competition {
         this.competitionComplete = competitionComplete;
     }
 
-    @OneToMany(mappedBy="competition", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy="competition", fetch = FetchType.LAZY)
     public List<Team> getTeamsInCompetition() {
         return teamsInCompetition;
     }
@@ -74,6 +76,13 @@ public class Competition {
 
     public void runCompetition() {
         Team winner = null;
+
+        // gets rid of duplicates caused by eager loading
+        Set<Team> hs = new HashSet<Team>();
+        hs.addAll(teamsInCompetition);
+        teamsInCompetition.clear();
+        teamsInCompetition.addAll(hs);
+
 
         for (Team team : getTeamsInCompetition())
             for (Team team2 : getTeamsInCompetition())

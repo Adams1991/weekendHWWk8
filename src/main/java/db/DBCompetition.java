@@ -9,7 +9,12 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
+import static javafx.scene.input.KeyCode.T;
 
 public class DBCompetition {
     private static Transaction transaction;
@@ -21,8 +26,9 @@ public class DBCompetition {
         List<Team> results = null;
         try {
             Criteria cr = session.createCriteria(Team.class);
-            cr.add(Restrictions.eq("competition", competition));
+            cr.add(Restrictions.eq("competition.id", competition.getId()));
             results =  cr.list();
+
         } catch (HibernateException e) {
             e.printStackTrace();
         } finally {
