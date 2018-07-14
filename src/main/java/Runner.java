@@ -1,3 +1,4 @@
+import db.DBCompetition;
 import db.DBHelper;
 import models.*;
 
@@ -31,6 +32,9 @@ public class Runner {
         team.setName("Loch FC");
         DBHelper.update(team);
 
+        Team team3 = new Team("Cowden FC", 30, competition);
+        DBHelper.save(team3);
+
         Team team2 = new Team("Bla United" , 10, competition);
         DBHelper.save(team2);
         DBHelper.delete(team2);
@@ -42,7 +46,7 @@ public class Runner {
 
         // Player Crud tests(only testing on subclass)
 
-        Midfielder midfielder = new Midfielder("Grant", 10, 20, team, 100);
+        Midfielder midfielder = new Midfielder("Grant", 10, 10, team, 100);
         DBHelper.save(midfielder);
         midfielder.setName("Bill");
         DBHelper.update(midfielder);
@@ -56,10 +60,10 @@ public class Runner {
         List<Midfielder> allMidfielders = DBHelper.getAll(Midfielder.class);
         
         
-        Striker striker = new Striker("Bob", 18, 20, team, true);
+        Striker striker = new Striker("Bob", 18, 8, team, true);
         DBHelper.save(striker); 
         
-        Defender defender = new Defender("Bob", 18, 20, team );
+        Defender defender = new Defender("Bobi", 18, 20, team );
         DBHelper.save(defender);
 
         
@@ -68,6 +72,9 @@ public class Runner {
         DBHelper.save(manager);
         manager.setName("Bill");
         DBHelper.update(manager);
+
+        Manager manager3 = new Manager("Bill", 2, team3);
+        DBHelper.save(manager3);
 
         Manager manager2 = new Manager("Lauren" , 10, team);
         DBHelper.save(manager2);
@@ -78,7 +85,10 @@ public class Runner {
         List<Manager> allManagers = DBHelper.getAll(Manager.class);
 
 
+        List<Team> teamsInComp = DBCompetition.getTeamsInCompetition(competition);
 
+
+        DBCompetition.playCompetition(competition);
 
 
 

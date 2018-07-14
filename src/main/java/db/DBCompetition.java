@@ -31,35 +31,27 @@ public class DBCompetition {
         return results;
     }
 
-    public static Manager getManager(Competition competition){
-        session = HibernateUtil.getSessionFactory().openSession();
-        Manager manager = null;
 
+
+    public static void playCompetition(Competition competition){
+        List teamsInComp = getTeamsInCompetition(competition);
+        competition.setTeamsInCompetition(teamsInComp);
+        competition.runCompetition();
+        for (Team team : competition.getTeamsInCompetition()) {
+            DBHelper.update(team);
+        }
+        session = HibernateUtil.getSessionFactory().openSession();
         try {
-            Criteria cr = session.createCriteria(Manager.class);
-            cr.add(Restrictions.eq("competition", competition));
-            manager = (Manager)cr.uniqueResult();
+            transaction = session.beginTransaction();
+            session.update(competition);
+            transaction.commit();
         } catch (HibernateException e) {
+            transaction.rollback();
             e.printStackTrace();
         } finally {
             session.close();
         }
-
-        return manager;
     }
 
-//
-//    public static void playCompetition(Object object){
-//        session = HibernateUtil.getSessionFactory().openSession();
-//        try {
-//            transaction = session.beginTransaction();
-//            session.update(object);
-//            transaction.commit();
-//        } catch (HibernateException e) {
-//            transaction.rollback();
-//            e.printStackTrace();
-//        } finally {
-//            session.close();
-//        }
-//    }
+
 }

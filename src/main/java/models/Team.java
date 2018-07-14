@@ -58,7 +58,7 @@ public class Team {
         this.points = points;
     }
 
-    @OneToMany(mappedBy="team", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy="team", fetch = FetchType.EAGER)
     public List<Player> getPlayers() {
         return players;
     }
@@ -67,7 +67,7 @@ public class Team {
         this.players = players;
     }
 
-    @OneToOne(mappedBy = "team", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "team", fetch = FetchType.EAGER)
     public Manager getManager() {
         return manager;
     }
