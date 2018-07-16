@@ -2,6 +2,7 @@ package db;
 
 import models.Competition;
 import models.Manager;
+import models.Player;
 import models.Team;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
