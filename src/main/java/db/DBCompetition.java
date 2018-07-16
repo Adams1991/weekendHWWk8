@@ -43,6 +43,15 @@ public class DBCompetition {
     public static void playCompetition(Competition competition){
         List teamsInComp = getTeamsInCompetition(competition);
         competition.setTeamsInCompetition(teamsInComp);
+
+        for (Team team : competition.getTeamsInCompetition()) {
+            Manager teamManager = DBTeam.getManager(team);
+            team.setManager(teamManager);
+            List <Player> teamPlayers = DBTeam.getPlayers(team);
+            team.setPlayers(teamPlayers);
+        }
+
+        competition.setTeamsInCompetition(teamsInComp);
         competition.runCompetition();
         for (Team team : competition.getTeamsInCompetition()) {
             DBHelper.update(team);

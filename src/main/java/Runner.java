@@ -1,5 +1,6 @@
 import db.DBCompetition;
 import db.DBHelper;
+import db.DBTeam;
 import models.*;
 
 import java.util.List;
@@ -86,6 +87,10 @@ public class Runner {
 
 
         List<Team> teamsInComp = DBCompetition.getTeamsInCompetition(competition);
+
+        List<Player> playersInTeam = DBTeam.getPlayers(team);
+
+        Manager teamManager = DBTeam.getManager(team);
 
 
         DBCompetition.playCompetition(competition);
